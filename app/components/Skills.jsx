@@ -3,25 +3,85 @@
 import React, { useState } from "react";
 import SectionHeading from "../components/SectionHeading";
 
-// Updated skills data from your resume
+// Skills are arranged to highlight backend engineering strengths first,
+// followed by databases, tooling, AI workflow exposure, and frontend support.
+
 const skillsData = {
-  Languages: ["Java", "Python", "SQL", "JavaScript", "C++", "C"],
-  Frameworks: ["Spring Boot", "ReactJS", "Node.js", "Express.js", "Flask"],
-  Libraries: [
-    "Kafka",
-    "Hibernate with JPA",
+  Backend: [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "Microservices",
     "Spring MVC",
-    "Spring Data",
-    "JUnit",
-    "AWS",
+    "Spring Data JPA",
+    "Hibernate with JPA",
+    "Kafka",
   ],
-  Methodologies: ["Agile", "RESTful APIs", "Microservices", "OOP", "DSA"],
-  Databases: ["MySQL", "MongoDB", "SQLite"],
-  Tools: ["IntelliJ IDEA", "VS Code", "Git", "Postman", "JIRA", "Docker"],
+
+  Databases: [
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "Redis",
+    "SQLite",
+    "H2",
+  ],
+
+  "Tools & DevOps": [
+    "Git",
+    "GitHub",
+    "Postman",
+    "Docker",
+    "Maven",
+    "Gradle",
+    "Jenkins",
+    "AWS",
+    "IntelliJ IDEA",
+    "VS Code",
+    "JIRA",
+  ],
+
+  Engineering: [
+    "API Design",
+    "System Design Basics",
+    "Authentication",
+    "Query Optimization",
+    "OOP",
+    "DSA",
+    "Agile",
+    "CRUD",
+  ],
+
+  "AI Workflow": [
+    "Spring AI",
+    "LLM APIs",
+    "RAG",
+    "Prompt Engineering",
+    "Vector Databases",
+  ],
+
+  "Frontend & Full Stack": [
+    "ReactJS",
+    "Node.js",
+    "Express.js",
+    "Redux",
+    "Flask",
+    "AJAX",
+  ],
+
+  Languages: [
+    "Python",
+    "JavaScript",
+    "SQL",
+    "C++",
+    "C",
+    "HTML5",
+    "CSS3",
+  ],
 };
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState("Languages");
+  const [activeTab, setActiveTab] = useState("Backend");
 
   return (
     <div
@@ -32,9 +92,14 @@ const Skills = () => {
         Technical Arsenal
       </SectionHeading>
 
+      <p className="text-center max-w-2xl mx-auto mb-8 font-Ovo leading-relaxed text-gray-700 dark:text-gray-300">
+        Focused on Java backend development, Spring Boot, REST APIs,
+        scalable systems, databases, and modern full-stack engineering.
+      </p>
+
       {/* Tabs */}
       <div className="w-full overflow-x-auto pb-4 mb-8">
-        <div className="flex justify-start md:justify-center gap-4 md:gap-8 border-b border-gray-200 dark:border-white/10">
+        <div className="flex justify-start md:justify-center gap-4 md:gap-8 border-b border-gray-200 dark:border-white/10 min-w-max">
           {Object.keys(skillsData).map((tab) => (
             <button
               key={tab}
@@ -52,7 +117,7 @@ const Skills = () => {
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-auto gap-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-auto gap-4 max-w-6xl mx-auto">
         {skillsData[activeTab].map((skill) => (
           <div
             key={skill}
@@ -60,7 +125,8 @@ const Skills = () => {
           >
             {/* Hover Gradient Overlay */}
             <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 bg-gradient-to-br from-purple-400 to-pink-400"></div>
-            <p className="font-semibold text-gray-800 dark:text-white z-10 text-center">
+
+            <p className="font-semibold text-gray-800 dark:text-white z-10 text-center text-sm md:text-base">
               {skill}
             </p>
           </div>
