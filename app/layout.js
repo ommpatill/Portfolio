@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import Cursor from "./components/Cursor";
 import { personSchema } from "./schema";
-
+import ScrollToTop from "./components/ScrollToTop";
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -150,6 +150,7 @@ export default function RootLayout({ children }) {
 
         <ThemeProvider>
           <Cursor />
+          <ScrollToTop/>
           {children}
         </ThemeProvider>
       </body>

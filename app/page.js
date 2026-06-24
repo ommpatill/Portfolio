@@ -14,6 +14,7 @@ import Experience from "./components/Experience";
 import Certifications from "./components/Certifications";
 import Academic from "./components/Academic";
 
+
 function ScrollHandler() {
   const searchParams = useSearchParams();
 
@@ -24,7 +25,6 @@ function ScrollHandler() {
         const element = document.getElementById(scrollTarget);
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
-          // ✅ Clean URL (remove ?scroll=xxx after scrolling)
           window.history.replaceState(null, "", "/");
         }
       }, 100);
@@ -38,6 +38,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
+
+      {/* Only for small screens so mobile content starts below fixed navbar */}
+      <div aria-hidden="true" className="h-[88px] sm:h-[96px] lg:hidden" />
+
       <Header />
       <About />
       <Academic />
@@ -47,7 +51,8 @@ export default function Home() {
       <Certifications limit={3} />
       <Contact />
       <Footer />
-      {/* ✅ Needed for useSearchParams */}
+
+
       <Suspense fallback={null}>
         <ScrollHandler />
       </Suspense>

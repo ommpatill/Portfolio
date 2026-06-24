@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
 import Footer from "../components/Footer";
 import AllProjectsList from "../components/AllProjectsList";
-import ProjectsPageHeader from "../components/PagesHeader"; // Corrected import based on your code
+import ProjectsPageHeader from "../components/PagesHeader"; 
 
 export default function AllProjectsPage() {
   return (
@@ -16,7 +16,8 @@ export default function AllProjectsPage() {
         <div className="w-full mt-8 px-4">
           <AllProjectsList isStandalonePage={true} />
         </div>
-        
+
+
         <div className="text-center my-16">
           <Link
             href="/#projects"
@@ -26,7 +27,11 @@ export default function AllProjectsPage() {
             Back to Home
           </Link>
         </div>
+
+        
+
       </main>
+      
       <Footer />
     </>
   );

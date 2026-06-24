@@ -8,6 +8,9 @@ export const personSchema = {
 
   image: "https://ompatilportfolio.vercel.app/og-image.png",
 
+  description:
+    "Java Backend Developer specializing in Spring Boot, REST APIs, scalable backend systems, SQL, and full stack application development.",
+
   sameAs: [
     "https://github.com/ommpatill",
     "https://www.linkedin.com/in/ompatill/",
@@ -17,8 +20,9 @@ export const personSchema = {
   jobTitle: [
     "Java Backend Developer",
     "Software Developer",
-    "Full Stack Developer",
     "Backend Engineer",
+    "Spring Boot Developer",
+    "Full Stack Developer",
   ],
 
   alumniOf: {
@@ -36,14 +40,43 @@ export const personSchema = {
     "Java",
     "Spring Boot",
     "REST APIs",
-    "React.js",
-    "Node.js",
+    "Backend Development",
+    "Backend Engineering",
     "SQL",
+    "PostgreSQL",
+    "MongoDB",
     "Kafka",
     "Microservices",
-    "Backend Development",
+    "System Design",
+    "Hibernate",
+    "JPA",
+    "React.js",
+    "Node.js",
     "Full Stack Development",
     "Machine Learning",
     "Spring AI",
+  ],
+
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://ompatilportfolio.vercel.app",
+  },
+
+  hasPart: [
+    {
+      "@type": "WebPage",
+      name: "Projects",
+      url: "https://ompatilportfolio.vercel.app/projects",
+    },
+    {
+      "@type": "WebPage",
+      name: "Certifications",
+      url: "https://ompatilportfolio.vercel.app/certifications",
+    },
+    {
+      "@type": "WebPage",
+      name: "Resume",
+      url: "https://ompatilportfolio.vercel.app/resume",
+    },
   ],
 };
