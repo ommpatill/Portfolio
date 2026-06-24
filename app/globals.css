@@ -6,9 +6,18 @@
   font-family: Outfit;
 }
 
-/* ===================== */
-/* Main Content Always On Top */
-/* ===================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+@media (max-width: 1023px) {
+  html {
+    scroll-padding-top: 84px;
+  }
+}
+
+/* Keep content above background effects */
 body,
 main,
 nav,
@@ -18,12 +27,11 @@ footer,
 #root,
 #__next {
   position: relative;
-  z-index: 10; /* keeps actual portfolio content above background effects */
+  z-index: 10;
 }
 
-/* ✅ --- ADDED THIS CLASS --- */
 /* Fixes text readability over the bright spotlight effect */
 .invert-on-spotlight {
-  color: white; /* Base color for dark mode */
+  color: white;
   mix-blend-mode: difference;
 }

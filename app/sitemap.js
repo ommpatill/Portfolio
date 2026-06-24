@@ -1,24 +1,35 @@
 export default function sitemap() {
   const baseUrl = "https://ompatilportfolio.vercel.app";
 
+  const currentDate = new Date();
+
   return [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 1,
     },
+
     {
       url: `${baseUrl}/projects`,
-      lastModified: new Date(),
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${baseUrl}/certifications`,
+      lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.8,
     },
+
     {
-      url: `${baseUrl}/certifications`,
-      lastModified: new Date(),
+      url: `${baseUrl}/resume`,
+      lastModified: currentDate,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.9,
     },
   ];
 }
