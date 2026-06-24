@@ -4,8 +4,7 @@ import { assets } from "../../assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 import SectionHeading from "./SectionHeading";
-// Change: Switched to a named import by adding curly braces
-import { useIsMobile } from "../hooks/useIsMobile"; 
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -37,11 +36,9 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className='w-full px-4 lg:px-[12%] py-12 lg:py-20 scroll-mt-12 lg:scroll-mt-10 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-contain lg:bg-[length:90%_auto] dark:bg-none'
+      className='w-full px-4 sm:px-[12%] pb-32 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-contain lg:bg-[length:90%_auto] dark:bg-none'
     >
-      <SectionHeading subheading="Connect with me">
-        Get in touch
-      </SectionHeading>
+      <SectionHeading subheading="Connect with me">Get in touch</SectionHeading>
 
       <p className="text-center max-w-2xl mx-auto mt-4 mb-6 lg:mb-8 font-Ovo">
         I am always open to new opportunities and collaborations. If you have a
@@ -75,7 +72,7 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="group px-10 py-3 font-semibold border rounded-full border-black  bg-white text-black flex items-center gap-3 w-max mx-auto transition-all duration-300 hover:scale-105 hover:bg-gray-200 active:scale-100 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-800"
+          className="group px-10 py-3 font-semibold border rounded-full border-black bg-white text-black flex items-center gap-3 w-max mx-auto transition-all duration-300 hover:scale-105 hover:bg-gray-200 active:scale-100 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-800"
         >
           Submit now{" "}
           <Image
@@ -84,7 +81,7 @@ const Contact = () => {
             className="w-4"
           />
         </button>
-        <p className="text-center mt-4 ">{result}</p>
+        <p className="text-center mt-4">{result}</p>
       </form>
     </section>
   );

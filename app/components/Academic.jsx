@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import SectionHeading from "../components/SectionHeading";
 
-// Reusable Academic Card component
 const AcademicCard = ({ institution, degree, duration, location, grade }) => {
   return (
     <div className="bg-white/80 dark:bg-darkHover/40 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-xl shadow-lg px-6 py-4 transition-transform hover:scale-[1.02]">
@@ -14,8 +13,7 @@ const AcademicCard = ({ institution, degree, duration, location, grade }) => {
         {duration}
       </time>
       <p className="text-sm font-normal text-gray-700 dark:text-gray-300">
-        {degree} –{" "}
-        <span className="text-gray-500">{location}</span>
+        {degree} – <span className="text-gray-500">{location}</span>
       </p>
       {grade && (
         <p className="mt-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
@@ -25,7 +23,6 @@ const AcademicCard = ({ institution, degree, duration, location, grade }) => {
     </div>
   );
 };
-
 
 const Academic = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -53,7 +50,7 @@ const Academic = () => {
     {
       institution: "BRACT's Vishwakarma Institute of Information Technology",
       degree: "Bachelor of Technology in Information Technology",
-      duration: "August 2023 - June 2026 (Expected)",
+      duration: "August 2023 - June 2026 (Graduated)",
       location: "Pune, India",
       grade: "CGPA: 8.19",
     },
@@ -62,7 +59,7 @@ const Academic = () => {
       degree: "Diploma in Information Technology",
       duration: "July 2020 - June 2023",
       location: "Lonere, Raigad",
-      grade: "Percentage: 91.30",
+      grade: "Percentage: 91.30%",
     },
     {
       institution: "Sharada Highschool Kasu",
@@ -74,23 +71,24 @@ const Academic = () => {
   ];
 
   if (!hasMounted) {
-    return null; // Return null to prevent hydration mismatch on first server render
+    return null;
   }
 
   return (
-    <div id="academic" className="w-full px-4 sm:px-[12%] py-10 scroll-mt-12 lg:scroll-mt-20">
-      
+    <section
+      id="academic"
+      className="w-full px-4 sm:px-[12%] pb-32"
+    >
       <SectionHeading subheading={"My Education"}>
         Academic Journey
       </SectionHeading>
 
       <div className="relative max-w-5xl mx-auto">
-        {/* Vertical gradient timeline */}
         {!isMobile && (
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-400 via-purple-500 to-purple-700 -translate-x-1/2"></div>
         )}
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8">
           {academicData.map((item, index) => (
             <div
               key={index}
@@ -98,12 +96,10 @@ const Academic = () => {
                 index % 2 === 0 ? "md:justify-start" : "md:justify-end"
               }`}
             >
-              {/* Timeline dot with glow */}
               {!isMobile && (
                 <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-purple-500 ring-4 ring-white dark:ring-darkTheme shadow-[0_0_10px_rgba(168,85,247,0.6)]"></div>
               )}
 
-              {/* Card */}
               <div className="w-full md:w-5/12">
                 <AcademicCard {...item} />
               </div>
@@ -111,7 +107,7 @@ const Academic = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

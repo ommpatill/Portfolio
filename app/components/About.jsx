@@ -54,39 +54,33 @@ const About = () => {
 
   return (
     <>
-      <section
-        id="about"
-        className="w-full px-4 sm:px-[12%] py-10 scroll-mt-12 lg:scroll-mt-20"
-      >
-        <SectionHeading subheading="My Story">
-          About Me
-        </SectionHeading>
+      <section id="about" className="w-full px-4 sm:px-[12%] pb-32">
+        <SectionHeading subheading="My Story">About Me</SectionHeading>
 
-        <div className="flex flex-col gap-10">
-          {/* Top Row: Story and Image */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+        <div className="flex flex-col gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             <div className="lg:col-span-3">
               <div className="flex flex-col gap-4 text-base md:text-lg font-Ovo text-gray-700 dark:text-gray-300 text-center lg:text-left">
                 <p>
                   Growing up in the town of Pen, Maharashtra, my journey into
                   technology began with a simple line of Java code:
-                  <code> System.out.println("Hello, World!");</code>.
-                  Watching those words appear on the screen sparked a deep
-                  curiosity about how software systems work behind the scenes.
-                  What started as curiosity slowly turned into a strong passion
-                  for backend development, problem solving, and building
-                  scalable applications.
+                  <code> System.out.println("Hello, World!");</code>. Watching
+                  those words appear on the screen sparked a deep curiosity
+                  about how software systems work behind the scenes. What
+                  started as curiosity slowly turned into a strong passion for
+                  backend development, problem solving, and building scalable
+                  systems.
                 </p>
-
                 <p>
                   That curiosity took me from diploma studies in Information
-                  Technology to pursuing my B.Tech while continuously building
-                  real-world projects across backend engineering, full stack
-                  development, machine learning, and modern web technologies.
-                  Today, my primary focus is on Java, Spring Boot, REST APIs,
-                  databases, and scalable backend systems. I enjoy turning
-                  complex ideas into clean, efficient, and user-focused software
-                  solutions while continuously improving my engineering skills
+                  Technology to earning a B.Tech degree while continuously
+                  building real-world projects across backend engineering, full
+                  stack development, machine learning, and modern web
+                  technologies. Today, my primary focus is on Java, Spring Boot,
+                  REST APIs, databases, and scalable backend systems. I enjoy
+                  turning ideas into reliable software solutions, collaborating
+                  with developers and teams, contributing to meaningful
+                  projects, and continuously improving my engineering skills
                   through hands-on development and practical problem solving.
                 </p>
               </div>
@@ -104,8 +98,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Bottom Row: Expertise and Credentials */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             <div className="lg:col-span-3">
               <h3 className="text-2xl font-semibold font-Ovo mb-4 text-center lg:text-left">
                 Domain Expertise

@@ -36,7 +36,7 @@ const Header = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        delay: 2.8,
+        delay: 3.5,
       },
     },
   };
@@ -45,7 +45,7 @@ const Header = () => {
     "Java Backend Developer building scalable Spring Boot applications and modern full-stack solutions.";
 
   const description =
-    "Software Developer based in Pune, focused on backend engineering, REST APIs, scalable systems, and responsive full-stack applications using Java, Spring Boot, React, Node.js, and SQL.";
+    "Software Developer based in Pune, focused on backend engineering, scalable systems, and modern web applications. Open to opportunities, collaborations, freelance projects, and open-source contributions.";
 
   const ref = useRef(null);
 
@@ -62,17 +62,8 @@ const Header = () => {
     damping: 40,
   });
 
-  const rotateX = useTransform(
-    ySpring,
-    [-0.5, 0.5],
-    ["12deg", "-12deg"]
-  );
-
-  const rotateY = useTransform(
-    xSpring,
-    [-0.5, 0.5],
-    ["-12deg", "12deg"]
-  );
+  const rotateX = useTransform(ySpring, [-0.5, 0.5], ["12deg", "-12deg"]);
+  const rotateY = useTransform(xSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
 
   const handleMouseMove = (e) => {
     if (!ref.current) return;
@@ -94,7 +85,7 @@ const Header = () => {
   return (
     <section
       id="top"
-      className="w-full min-h-screen px-4 sm:px-[12%] flex items-center justify-center relative overflow-hidden"
+      className="w-full min-h-screen px-3 sm:px-4 lg:px-[12%] flex items-start lg:items-center justify-center relative overflow-hidden pt-0 sm:pt-1 lg:pt-0"
     >
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-white dark:bg-darkTheme [mask-image:radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(200,200,200,0.6),rgba(255,255,255,0))]"></div>
@@ -104,9 +95,9 @@ const Header = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center z-10 w-full max-w-6xl"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 items-start lg:items-center z-10 w-full max-w-6xl"
       >
-        <div className="flex flex-col items-center justify-center order-1 lg:order-1 text-center">
+        <div className="flex flex-col items-center justify-start order-1 lg:order-1 text-center">
           <motion.div
             ref={ref}
             onMouseMove={handleMouseMove}
@@ -129,19 +120,15 @@ const Header = () => {
 
           <motion.h2
             variants={itemVariants}
-            className="flex items-center justify-center gap-2 text-xl md:text-2xl mt-6 font-Ovo font-semibold text-gray-800 dark:text-purple-400"
+            className="flex items-center justify-center gap-2 text-xl md:text-2xl mt-3 sm:mt-6 font-Ovo font-semibold text-gray-800 dark:text-purple-400"
           >
-            Hello, I'm Om Patil
-            <Image
-              src={assets.hand_icon}
-              alt="Waving hand"
-              className="w-6"
-            />
+            Hello, I&apos;m Om Patil
+            <Image src={assets.hand_icon} alt="Waving hand" className="w-6" />
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="max-w-md text-center mt-2 font-Ovo text-gray-700 dark:text-gray-300"
+            className="max-w-[92vw] sm:max-w-md text-center mt-1 sm:mt-2 font-Ovo text-gray-700 dark:text-gray-300"
           >
             {description}
           </motion.p>
@@ -165,7 +152,7 @@ const Header = () => {
 
           <motion.div
             variants={buttonVariants}
-            className="flex flex-row items-center justify-center lg:justify-start gap-4 mt-6 lg:mt-8"
+            className="flex flex-row items-center justify-center lg:justify-start gap-3 mt-4 lg:mt-8"
           >
             <a
               href="/OmPatil_Resume.pdf"
@@ -173,7 +160,6 @@ const Header = () => {
               className="px-8 py-3 w-auto justify-center rounded-full font-semibold bg-black text-white hover:bg-gray-800 dark:bg-darkTheme dark:text-white dark:border dark:border-gray-600 dark:hover:border-white flex items-center gap-2 transition-all duration-300 transform hover:scale-105"
             >
               My Resume
-
               <Image
                 src={assets.download_icon}
                 alt="Download resume"

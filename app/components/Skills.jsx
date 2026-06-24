@@ -3,9 +3,6 @@
 import React, { useState } from "react";
 import SectionHeading from "../components/SectionHeading";
 
-// Skills are arranged to highlight backend engineering strengths first,
-// followed by databases, tooling, AI workflow exposure, and frontend support.
-
 const skillsData = {
   Backend: [
     "Java",
@@ -18,14 +15,7 @@ const skillsData = {
     "Kafka",
   ],
 
-  Databases: [
-    "PostgreSQL",
-    "MySQL",
-    "MongoDB",
-    "Redis",
-    "SQLite",
-    "H2",
-  ],
+  Databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "H2"],
 
   "Tools & DevOps": [
     "Git",
@@ -60,45 +50,29 @@ const skillsData = {
     "Vector Databases",
   ],
 
-  "Frontend & Full Stack": [
-    "ReactJS",
-    "Node.js",
-    "Express.js",
-    "Redux",
-    "Flask",
-    "AJAX",
-  ],
+  "Frontend & Full Stack": ["ReactJS", "Node.js", "Express.js", "Redux", "Flask", "AJAX"],
 
-  Languages: [
-    "Python",
-    "JavaScript",
-    "SQL",
-    "C++",
-    "C",
-    "HTML5",
-    "CSS3",
-  ],
+  Languages: ["Python", "JavaScript", "SQL", "C++", "C", "HTML5", "CSS3"],
 };
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("Backend");
 
   return (
-    <div
+    <section
       id="skills"
-      className="w-full px-4 sm:px-[12%] py-10 lg:py-20 scroll-mt-12 lg:scroll-mt-10 min-h-screen"
+      className="w-full px-4 sm:px-[12%] lg:pb-48 pb-32"
     >
       <SectionHeading subheading="My Core Competencies">
         Technical Arsenal
       </SectionHeading>
 
-      <p className="text-center max-w-2xl mx-auto mb-8 font-Ovo leading-relaxed text-gray-700 dark:text-gray-300">
+      <p className="text-center max-w-2xl mx-auto mb-6 font-Ovo leading-relaxed text-gray-700 dark:text-gray-300">
         Focused on Java backend development, Spring Boot, REST APIs,
         scalable systems, databases, and modern full-stack engineering.
       </p>
 
-      {/* Tabs */}
-      <div className="w-full overflow-x-auto pb-4 mb-8">
+      <div className="w-full overflow-x-auto pb-4 mb-6">
         <div className="flex justify-start md:justify-center gap-4 md:gap-8 border-b border-gray-200 dark:border-white/10 min-w-max">
           {Object.keys(skillsData).map((tab) => (
             <button
@@ -116,14 +90,12 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Skills Grid */}
       <div className="grid grid-cols-2 md:grid-cols-auto gap-4 max-w-6xl mx-auto">
         {skillsData[activeTab].map((skill) => (
           <div
             key={skill}
             className="group relative flex items-center justify-center p-4 h-24 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl shadow-md cursor-pointer transition-transform hover:scale-[1.05] hover:-translate-y-1"
           >
-            {/* Hover Gradient Overlay */}
             <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 bg-gradient-to-br from-purple-400 to-pink-400"></div>
 
             <p className="font-semibold text-gray-800 dark:text-white z-10 text-center text-sm md:text-base">
@@ -132,7 +104,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
