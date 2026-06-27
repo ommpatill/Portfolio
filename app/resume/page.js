@@ -78,7 +78,7 @@ const resumeHighlights = [
   {
     title: "Current profile",
     description:
-      "B.Tech Information Technology student graduating in June 2026 with internship experience and backend-focused portfolio projects.",
+      "B.Tech graduate in Information Technology with internship experience, hands-on expertise in Java and Spring Boot, and a portfolio showcasing backend engineering, REST APIs, database design, and scalable software development.",
   },
 ];
 
