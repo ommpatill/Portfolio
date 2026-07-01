@@ -97,7 +97,7 @@ const About = () => {
               </div>
             </div>
           </div>
-
+{/*  Below are the cards that shows the different expertise*/}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             <div className="lg:col-span-3">
               <h3 className="text-2xl font-semibold font-Ovo mb-4 text-center lg:text-left">
