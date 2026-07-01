@@ -117,7 +117,7 @@ const Header = () => {
               />
             </div>
           </motion.div>
-
+{/*  Circular color transtioning ring*/}
           <motion.h2
             variants={itemVariants}
             className="flex items-center justify-center gap-2 text-xl md:text-2xl mt-3 sm:mt-6 font-Ovo font-semibold text-gray-800 dark:text-purple-400"
