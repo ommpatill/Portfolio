@@ -4,6 +4,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Cursor from "./components/Cursor";
 import { personSchema } from "./schema";
 import ScrollToTop from "./components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/next";
+
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -152,6 +154,7 @@ export default function RootLayout({ children }) {
           <Cursor />
           <ScrollToTop/>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
