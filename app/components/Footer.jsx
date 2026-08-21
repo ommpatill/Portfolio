@@ -75,7 +75,7 @@ const Footer = () => {
           </li>
           <li>
             <a 
-              href="https://instagram.com/ommpatil.__" 
+              href="https://instagram.com/ompatill.__" 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Instagram Profile"
